@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body {
+            background: rgb(108, 227, 229);
+        }
+    </style>
+</head>
+<body>
+    <h1>Brasileiro ou Gringo?</h1>
+    Infome o pais onde você nasceu: <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Verificar" onclick="resposta()">
+    <div id="respais">
+
+    </div>
+    
+    <script>
+        function resposta() {
+            var txtpaisres = window.document.querySelector('input#txtpais')
+            var respais = window.document.querySelector('div#respais')
+            var respostap = txtpaisres.value
+            respais.innerHTML = `<p>O pais que você nasceu é <strong>${respostap}</strong></p>`
+            if (respostap == 'Brasil') {
+                respais.innerHTML += `<p>Você é <strong>BRASILEIRO<strong>!</p>`
+            } else {
+                respais.innerHTML += `<p>Você é <strong>GRINGO<strong>.</p>`
+            }
+
+        }
+    </script>
+</body>
+</html>
